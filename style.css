@@ -14,6 +14,11 @@
     --font-body: 'Poppins', sans-serif;
 }
 
+/* Rolagem Suave ativada para o site todo */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +43,41 @@ body {
 }
 
 /* =========================================
+   Menu de Navegação Fixo (NOVO)
+   ========================================= */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(217, 160, 111, 0.2);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sticky-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.sticky-nav a:hover {
+    color: var(--gold);
+}
+
+/* =========================================
    Cabeçalho (Header) com Logo em Imagem
    ========================================= */
 .main-header {
@@ -51,9 +91,9 @@ body {
     position: relative;
     margin-bottom: 70px;
     padding: 40px;
+    margin-top: 50px; /* Espaço para o menu fixo não cobrir o topo */
 }
 
-/* Estilização para garantir que a logo da IA fique linda e não distorça */
 .header-content {
     display: flex;
     justify-content: center;
@@ -67,11 +107,11 @@ body {
     max-width: 90%;
     object-fit: contain;
     filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.8));
-    border-radius: 20px; /* Caso a logo tenha gerado com fundo quadrado escuro, suaviza as bordas */
+    border-radius: 20px;
 }
 
 /* =========================================
-   Container do Catálogo
+   Container do Catálogo e Títulos
    ========================================= */
 .catalog-container {
     max-width: 1300px;
@@ -79,8 +119,10 @@ body {
     padding: 0 20px;
 }
 
+/* Margem superior invisível para a rolagem parar no lugar certo por causa do menu fixo */
 .category-section {
     margin-bottom: 90px;
+    scroll-margin-top: 100px; 
 }
 
 .category-title {
@@ -202,6 +244,7 @@ body {
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
+    scroll-margin-top: 100px;
 }
 
 .special-order-content {
@@ -252,6 +295,30 @@ body {
 }
 
 /* =========================================
+   Botão Flutuante WhatsApp (NOVO)
+   ========================================= */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #fff;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(217, 160, 111, 0.4);
+}
+
+/* =========================================
    Rodapé (Footer)
    ========================================= */
 .main-footer {
@@ -287,4 +354,15 @@ body {
     .special-order-content { padding: 40px 20px; }
     
     .special-title { font-size: 1.8rem; }
+    
+    .sticky-nav ul { gap: 15px; }
+    
+    .sticky-nav a { font-size: 0.8rem; letter-spacing: 1px; }
+    
+    .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
