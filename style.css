@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     --bg-gradient: linear-gradient(135deg, #050505 0%, #151515 100%);
-    --card-bg: rgba(26, 26, 26, 0.6); /* Efeito translúcido */
+    --card-bg: rgba(26, 26, 26, 0.6);
     --gold: #d9a06f;
     --gold-bright: #ffcc99;
     --text-main: #f0f0f0;
@@ -29,7 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* Decoração sutil no fundo da página */
 .background-effects {
     position: fixed;
     top: -50%; left: -50%; width: 200%; height: 200%;
@@ -39,10 +38,10 @@ body {
 }
 
 /* =========================================
-   Cabeçalho (Header)
+   Cabeçalho (Header) com Logo em Imagem
    ========================================= */
 .main-header {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,34 +50,24 @@ body {
     border-bottom: 1px solid rgba(217, 160, 111, 0.2);
     position: relative;
     margin-bottom: 70px;
+    padding: 40px;
 }
 
-.header-content h1 {
-    font-family: var(--font-title);
-    font-size: 4.5rem;
-    font-weight: 700;
-    background: linear-gradient(to right, var(--gold), var(--gold-bright), var(--gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0px 4px 10px rgba(217, 160, 111, 0.2));
+/* Estilização para garantir que a logo da IA fique linda e não distorça */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.header-divider {
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 0 auto 20px auto;
-}
-
-.header-content p {
-    font-size: 1.2rem;
-    color: var(--text-sec);
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+.site-logo {
+    max-height: 85%;
+    max-width: 90%;
+    object-fit: contain;
+    filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.8));
+    border-radius: 20px; /* Caso a logo tenha gerado com fundo quadrado escuro, suaviza as bordas */
 }
 
 /* =========================================
@@ -90,7 +79,6 @@ body {
     padding: 0 20px;
 }
 
-/* Títulos das Categorias */
 .category-section {
     margin-bottom: 90px;
 }
@@ -130,7 +118,7 @@ body {
 
 .product-card {
     background-color: var(--card-bg);
-    backdrop-filter: blur(10px); /* Efeito vidro fosco */
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-top: 1px solid rgba(217, 160, 111, 0.2);
@@ -161,7 +149,7 @@ body {
     max-height: 100%;
     object-fit: contain;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5)); /* Sombra realista na foto */
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));
 }
 
 .product-card:hover img {
@@ -190,7 +178,7 @@ body {
     text-decoration: none;
     padding: 14px 30px;
     border: 1px solid var(--gold);
-    border-radius: 30px; /* Botão mais arredondado e elegante */
+    border-radius: 30px;
     font-family: var(--font-body);
     font-weight: 400;
     text-transform: uppercase;
@@ -290,16 +278,13 @@ body {
    Responsividade (Celular)
    ========================================= */
 @media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 2.8rem;
-        letter-spacing: 5px;
-    }
+    .main-header { height: 45vh; padding: 20px; }
+    
+    .site-logo { max-height: 95%; max-width: 95%; }
     
     .category-title { font-size: 2.2rem; }
     
-    .special-order-content {
-        padding: 40px 20px;
-    }
+    .special-order-content { padding: 40px 20px; }
     
     .special-title { font-size: 1.8rem; }
 }
