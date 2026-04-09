@@ -14,7 +14,6 @@
     --font-body: 'Poppins', sans-serif;
 }
 
-/* Rolagem Suave ativada para o site todo */
 html {
     scroll-behavior: smooth;
 }
@@ -43,7 +42,7 @@ body {
 }
 
 /* =========================================
-   Menu de Navegação Fixo (NOVO)
+   Menu de Navegação Fixo
    ========================================= */
 .sticky-nav {
     position: fixed;
@@ -77,6 +76,11 @@ body {
     color: var(--gold);
 }
 
+.nav-insta {
+    color: var(--gold) !important;
+    font-weight: 600;
+}
+
 /* =========================================
    Cabeçalho (Header) com Logo em Imagem
    ========================================= */
@@ -91,7 +95,7 @@ body {
     position: relative;
     margin-bottom: 70px;
     padding: 40px;
-    margin-top: 50px; /* Espaço para o menu fixo não cobrir o topo */
+    margin-top: 50px;
 }
 
 .header-content {
@@ -111,7 +115,7 @@ body {
 }
 
 /* =========================================
-   Container do Catálogo e Títulos
+   Container do Catálogo
    ========================================= */
 .catalog-container {
     max-width: 1300px;
@@ -119,7 +123,6 @@ body {
     padding: 0 20px;
 }
 
-/* Margem superior invisível para a rolagem parar no lugar certo por causa do menu fixo */
 .category-section {
     margin-bottom: 90px;
     scroll-margin-top: 100px; 
@@ -238,7 +241,7 @@ body {
 }
 
 /* =========================================
-   Seção de Encomendas Exclusivas
+   Seção de Encomendas
    ========================================= */
 .special-order-section {
     margin-bottom: 80px;
@@ -295,7 +298,7 @@ body {
 }
 
 /* =========================================
-   Botão Flutuante WhatsApp (NOVO)
+   Botão Flutuante WhatsApp
    ========================================= */
 .floating-whatsapp {
     position: fixed;
@@ -319,7 +322,7 @@ body {
 }
 
 /* =========================================
-   Rodapé (Footer)
+   Rodapé (Footer) e Botão Instagram
    ========================================= */
 .main-footer {
     padding: 50px 20px;
@@ -327,6 +330,37 @@ body {
     text-align: center;
     color: var(--text-sec);
     background-color: #080808;
+}
+
+.footer-social {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 12px 28px;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-instagram:hover {
+    background: var(--gold);
+    color: #000;
+    box-shadow: 0 0 20px rgba(217, 160, 111, 0.4);
+    font-weight: 600;
 }
 
 .main-footer p {
@@ -364,5 +398,10 @@ body {
         right: 20px;
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+    
+    .btn-instagram {
+        font-size: 0.8rem;
+        padding: 10px 20px;
     }
 }
