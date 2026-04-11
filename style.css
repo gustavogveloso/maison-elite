@@ -42,13 +42,13 @@ body {
 }
 
 /* =========================================
-   Menu de Navegação Fixo
+   Menu de Navegação Fixo (Melhorado para Mobile)
    ========================================= */
 .sticky-nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.85);
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(217, 160, 111, 0.2);
@@ -61,6 +61,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+    padding: 0 15px;
 }
 
 .sticky-nav a {
@@ -70,6 +71,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .sticky-nav a:hover {
@@ -93,9 +95,9 @@ body {
     background: radial-gradient(circle at center, rgba(30,30,30,0.8) 0%, transparent 100%);
     border-bottom: 1px solid rgba(217, 160, 111, 0.2);
     position: relative;
-    margin-bottom: 70px;
-    padding: 40px;
+    margin-bottom: 40px;
     margin-top: 50px;
+    padding: 40px;
 }
 
 .header-content {
@@ -115,6 +117,62 @@ body {
 }
 
 /* =========================================
+   Barra de Pesquisa (NOVO)
+   ========================================= */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 40px;
+    border: 1px solid rgba(217, 160, 111, 0.5);
+    background: rgba(20, 20, 20, 0.8);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#searchInput::placeholder {
+    color: var(--text-sec);
+    opacity: 0.7;
+}
+
+#searchInput:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(217, 160, 111, 0.3);
+    background: rgba(30, 30, 30, 0.9);
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(26, 26, 26, 0.4);
+    border-radius: 16px;
+    border: 1px dashed var(--gold);
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.no-results h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+}
+
+.no-results p {
+    margin-bottom: 25px;
+    color: var(--text-sec);
+}
+
+/* =========================================
    Container do Catálogo
    ========================================= */
 .catalog-container {
@@ -125,7 +183,7 @@ body {
 
 .category-section {
     margin-bottom: 90px;
-    scroll-margin-top: 100px; 
+    scroll-margin-top: 120px; 
 }
 
 .category-title {
@@ -180,7 +238,6 @@ body {
     box-shadow: 0 15px 40px rgba(217, 160, 111, 0.15);
 }
 
-/* Aqui está o Efeito Spotlight para fotos sem fundo! */
 .product-image-wrapper {
     width: 100%;
     height: 260px;
@@ -198,6 +255,7 @@ body {
     object-fit: contain;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     filter: drop-shadow(0 15px 15px rgba(0,0,0,0.6));
+    border-radius: 8px;
 }
 
 .product-card:hover img {
@@ -210,10 +268,21 @@ body {
     font-weight: 400;
     color: var(--text-main);
     margin-bottom: 25px;
-    height: 40px;
+    min-height: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.product-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-family: var(--font-body);
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* =========================================
@@ -234,6 +303,7 @@ body {
     letter-spacing: 2px;
     transition: all 0.3s ease;
     width: 100%;
+    cursor: pointer;
 }
 
 .btn-whatsapp:hover {
@@ -265,14 +335,6 @@ body {
     overflow: hidden;
 }
 
-.special-order-content::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(217, 160, 111, 0.05) 0%, transparent 60%);
-    pointer-events: none;
-}
-
 .special-title {
     font-family: var(--font-title);
     font-size: 2.2rem;
@@ -293,11 +355,6 @@ body {
     background: var(--gold);
     color: #000;
     font-weight: 600;
-}
-
-.special-btn:hover {
-    background: var(--gold-bright);
-    box-shadow: 0 0 30px rgba(217, 160, 111, 0.6);
 }
 
 /* =========================================
@@ -379,22 +436,53 @@ body {
 }
 
 /* =========================================
-   Responsividade (Celular)
+   Responsividade Total (Celular e Tablets)
    ========================================= */
 @media (max-width: 768px) {
-    .main-header { height: 45vh; padding: 20px; }
+    .main-header { 
+        height: 40vh; 
+        padding: 20px; 
+        margin-top: 60px; 
+    }
     
-    .site-logo { max-height: 95%; max-width: 95%; }
+    .site-logo { 
+        max-height: 90%; 
+        max-width: 90%; 
+    }
     
-    .category-title { font-size: 2.2rem; }
+    /* Faz o menu fixo deslizar para os lados no celular ao invés de quebrar a linha */
+    .sticky-nav ul { 
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px; /* espaço para o scroll invisível */
+    }
     
-    .special-order-content { padding: 40px 20px; }
+    /* Esconde a barra de rolagem mas mantém a função */
+    .sticky-nav ul::-webkit-scrollbar {
+        display: none;
+    }
     
-    .special-title { font-size: 1.8rem; }
+    .sticky-nav a { 
+        font-size: 0.8rem; 
+    }
+
+    #searchInput {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
     
-    .sticky-nav ul { gap: 15px; }
+    .category-title { 
+        font-size: 2.2rem; 
+    }
     
-    .sticky-nav a { font-size: 0.8rem; letter-spacing: 1px; }
+    .special-order-content { 
+        padding: 40px 20px; 
+    }
+    
+    .special-title { 
+        font-size: 1.8rem; 
+    }
     
     .floating-whatsapp {
         bottom: 20px;
@@ -406,5 +494,11 @@ body {
     .btn-instagram {
         font-size: 0.8rem;
         padding: 10px 20px;
+    }
+
+    /* Ajuste fino dos cartões para celular (evita que fiquem espremidos) */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }

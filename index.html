@@ -19,6 +19,7 @@
         <ul>
             <li><a href="#masculinos">Masculinos</a></li>
             <li><a href="#femininos">Femininos</a></li>
+            <li><a href="#victoria">Victoria's Secret</a></li>
             <li><a href="#encomendas">Encomendas</a></li>
             <li><a href="https://www.instagram.com/maisoneliteperfumaria/" target="_blank" class="nav-insta">Instagram</a></li>
         </ul>
@@ -32,95 +33,83 @@
 
     <main class="catalog-container">
         
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="🔍 Busque por perfume, marca ou estilo...">
+        </div>
+
+        <div id="noResultsMessage" class="no-results" style="display: none;">
+            <h3>Fragrância não encontrada no catálogo atual.</h3>
+            <p>Mas não se preocupe! A Maison Élite encontra ela para você.</p>
+            <a href="https://wa.me/5564999418474?text=Olá!%20Fiz%20uma%20pesquisa%20no%20site%20e%20não%20encontrei%20o%20perfume%20que%20eu%20queria.%20Gostaria%20de%20fazer%20uma%20encomenda!" class="btn-whatsapp" target="_blank">Fazer Encomenda Exclusiva</a>
+        </div>
+
         <section id="masculinos" class="category-section">
             <h2 class="category-title">Linha Masculina</h2>
             
-            <div class="product-grid">
+            <div class="product-grid" id="masculinos-grid">
                 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/ferrari-black.png" alt="Ferrari Black" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="ferrari black">
+                    <div class="product-image-wrapper"><img src="img/masculinos/ferrari-black.png" alt="Ferrari Black" loading="lazy"></div>
                     <h3>Ferrari Black</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Ferrari%20Black." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/one-million.png" alt="One Million" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="one million paco rabanne">
+                    <div class="product-image-wrapper"><img src="img/masculinos/one-million.png" alt="One Million" loading="lazy"></div>
                     <h3>One Million</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20One%20Million." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/versace.png" alt="Versace" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="versace">
+                    <div class="product-image-wrapper"><img src="img/masculinos/versace.png" alt="Versace" loading="lazy"></div>
                     <h3>Versace</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Versace." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/sauvage.png" alt="Sauvage" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="sauvage dior">
+                    <div class="product-image-wrapper"><img src="img/masculinos/sauvage.png" alt="Sauvage" loading="lazy"></div>
                     <h3>Sauvage</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Sauvage." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/bleu-de-chanel.png" alt="Bleu de Chanel" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="bleu de chanel">
+                    <div class="product-image-wrapper"><img src="img/masculinos/bleu-de-chanel.png" alt="Bleu de Chanel" loading="lazy"></div>
                     <h3>Bleu de Chanel</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Bleu%20de%20Chanel." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/invictus.png" alt="Invictus" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="invictus paco rabanne">
+                    <div class="product-image-wrapper"><img src="img/masculinos/invictus.png" alt="Invictus" loading="lazy"></div>
                     <h3>Invictus</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Invictus." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/azzaro.png" alt="Azzaro Pour Homme" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="azzaro pour homme">
+                    <div class="product-image-wrapper"><img src="img/masculinos/azzaro.png" alt="Azzaro Pour Homme" loading="lazy"></div>
                     <h3>Azzaro Pour Homme</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Azzaro%20Pour%20Homme." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/creed-aventus.png" alt="Creed Aventus" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="creed aventus">
+                    <div class="product-image-wrapper"><img src="img/masculinos/creed-aventus.png" alt="Creed Aventus" loading="lazy"></div>
                     <h3>Creed Aventus</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Creed%20Aventus." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/asad.png" alt="Asad" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="asad lattafa arabe">
+                    <div class="product-image-wrapper"><img src="img/masculinos/asad.png" alt="Asad" loading="lazy"></div>
                     <h3>Asad</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Asad." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/yves-saint-laurent.png" alt="Yves Saint Laurent" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="yves saint laurent ysl">
+                    <div class="product-image-wrapper"><img src="img/masculinos/yves-saint-laurent.png" alt="Yves Saint Laurent" loading="lazy"></div>
                     <h3>Yves Saint Laurent</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Yves%20Saint%20Laurent." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/masculinos/silver-scent.png" alt="Silver Scent" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="silver scent">
+                    <div class="product-image-wrapper"><img src="img/masculinos/silver-scent.png" alt="Silver Scent" loading="lazy"></div>
                     <h3>Silver Scent</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Silver%20Scent." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
@@ -133,102 +122,112 @@
         <section id="femininos" class="category-section">
             <h2 class="category-title">Linha Feminina</h2>
             
-            <div class="product-grid">
+            <div class="product-grid" id="femininos-grid">
                 
-                <div class="product-card">
+                <div class="product-card" data-name="idole lancome lancôme refil">
                     <div class="product-image-wrapper">
-                        <img src="img/femininos/la-vie-est-belle.png" alt="La Vie Est Belle" loading="lazy">
+                        <img src="img/femininos/idole.png" alt="Idôle Lancôme" loading="lazy">
                     </div>
+                    <h3>Idôle Lancôme <span class="product-subtitle">Frasco & Refil</span></h3>
+                    <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Idôle%20Lancôme." class="btn-whatsapp" target="_blank">Quero Comprar</a>
+                </div>
+
+                <div class="product-card" data-name="la vie est belle lancome lancôme">
+                    <div class="product-image-wrapper"><img src="img/femininos/la-vie-est-belle.png" alt="La Vie Est Belle" loading="lazy"></div>
                     <h3>La Vie Est Belle</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20La%20Vie%20Est%20Belle." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/good-girls.png" alt="Good Girls" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="good girl carolina herrera sapatinho">
+                    <div class="product-image-wrapper"><img src="img/femininos/good-girls.png" alt="Good Girls" loading="lazy"></div>
                     <h3>Good Girls</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Good%20Girls." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/212-vip-rose.png" alt="212 Vip Rosé" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="212 vip rose carolina herrera rosé">
+                    <div class="product-image-wrapper"><img src="img/femininos/212-vip-rose.png" alt="212 Vip Rosé" loading="lazy"></div>
                     <h3>212 Vip Rosé</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20212%20Vip%20Rosé." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/prada.png" alt="Prada Paradoxe" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="prada paradoxe">
+                    <div class="product-image-wrapper"><img src="img/femininos/prada.png" alt="Prada Paradoxe" loading="lazy"></div>
                     <h3>Prada</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Prada." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/libre.png" alt="Libre" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="libre yves saint laurent ysl">
+                    <div class="product-image-wrapper"><img src="img/femininos/libre.png" alt="Libre" loading="lazy"></div>
                     <h3>Libre</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Libre." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/yara.png" alt="Yara" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="yara lattafa arabe rosa">
+                    <div class="product-image-wrapper"><img src="img/femininos/yara.png" alt="Yara" loading="lazy"></div>
                     <h3>Yara</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Yara." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/sabah.png" alt="Sabah" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="sabah arabe">
+                    <div class="product-image-wrapper"><img src="img/femininos/sabah.png" alt="Sabah" loading="lazy"></div>
                     <h3>Sabah</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Sabah." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/my-way.png" alt="My Way" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="my way giorgio armani">
+                    <div class="product-image-wrapper"><img src="img/femininos/my-way.png" alt="My Way" loading="lazy"></div>
                     <h3>My Way</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20My%20Way." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/olympea.png" alt="Olímpea" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="olympea paco rabanne olímpea">
+                    <div class="product-image-wrapper"><img src="img/femininos/olympea.png" alt="Olímpea" loading="lazy"></div>
                     <h3>Olímpea</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Olímpea." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/angel.png" alt="Angel" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="angel mugler">
+                    <div class="product-image-wrapper"><img src="img/femininos/angel.png" alt="Angel" loading="lazy"></div>
                     <h3>Angel</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Angel." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/jadore.png" alt="J'adore" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="jadore j'adore dior">
+                    <div class="product-image-wrapper"><img src="img/femininos/jadore.png" alt="J'adore" loading="lazy"></div>
                     <h3>J'adore</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20J'adore." class="btn-whatsapp" target="_blank">Quero Comprar</a>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="img/femininos/euphoria.png" alt="Euphoria" loading="lazy">
-                    </div>
+                <div class="product-card" data-name="euphoria calvin klein">
+                    <div class="product-image-wrapper"><img src="img/femininos/euphoria.png" alt="Euphoria" loading="lazy"></div>
                     <h3>Euphoria</h3>
                     <a href="https://wa.me/5564999418474?text=Olá!%20Tenho%20interesse%20no%20perfume%20Euphoria." class="btn-whatsapp" target="_blank">Quero Comprar</a>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="victoria" class="category-section">
+            <h2 class="category-title">Victoria's Secret</h2>
+            
+            <div class="product-grid" id="victoria-grid">
+                
+                <div class="product-card" data-name="victoria secret body splash">
+                    <div class="product-image-wrapper">
+                        <img src="img/victoria/bodysplash.jpg" alt="Body Splash Victoria's Secret" loading="lazy">
+                    </div>
+                    <h3>Body Splash <span class="product-subtitle">Diversas Fragrâncias</span></h3>
+                    <a href="https://wa.me/5564999418474?text=Olá!%20Gostaria%20de%20ver%20as%20fragrâncias%20disponíveis%20dos%20Body%20Splash%20Victoria's%20Secret." class="btn-whatsapp" target="_blank">Ver Opções</a>
+                </div>
+
+                <div class="product-card" data-name="victoria secret creme hidratante loção">
+                    <div class="product-image-wrapper">
+                        <img src="img/victoria/cremes.jpg" alt="Cremes Hidratantes Victoria's Secret" loading="lazy">
+                    </div>
+                    <h3>Cremes Hidratantes <span class="product-subtitle">Diversas Fragrâncias</span></h3>
+                    <a href="https://wa.me/5564999418474?text=Olá!%20Gostaria%20de%20ver%20as%20fragrâncias%20disponíveis%20dos%20Cremes%20Victoria's%20Secret." class="btn-whatsapp" target="_blank">Ver Opções</a>
                 </div>
 
             </div>
@@ -260,6 +259,46 @@
     <a href="https://wa.me/5564999418474?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20perfumes." class="floating-whatsapp" target="_blank">
         💬 Dúvidas?
     </a>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            let term = e.target.value.toLowerCase();
+            let cards = document.querySelectorAll('.product-card');
+            let sections = document.querySelectorAll('.category-section');
+            let hasResults = false;
+
+            // Filtra os cartões
+            cards.forEach(card => {
+                let name = card.getAttribute('data-name');
+                if(name && name.includes(term)) {
+                    card.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Esconde os títulos das seções se não houver resultado nelas
+            sections.forEach(section => {
+                let grid = section.querySelector('.product-grid');
+                if (grid) {
+                    let visibleCards = Array.from(grid.children).filter(card => card.style.display !== 'none');
+                    if (visibleCards.length === 0) {
+                        section.style.display = 'none';
+                    } else {
+                        section.style.display = 'block';
+                    }
+                }
+            });
+
+            // Mostra ou esconde a mensagem de Sem Resultados
+            document.getElementById('noResultsMessage').style.display = hasResults ? 'none' : 'block';
+            
+            // Garante que a seção de encomendas sempre apareça
+            document.getElementById('encomendas').style.display = 'flex';
+            document.getElementById('encomendas').parentElement.style.display = 'block';
+        });
+    </script>
 
 </body>
 </html>
